@@ -90,6 +90,10 @@
     &.syntax--function
     {
         color: @hue-3;
+        &.syntax--magic.syntax--php
+        {
+            color: @hue-1;
+        }
         &.syntax--filter.syntax--php
         {
             color: @hue-3;
@@ -108,5 +112,13 @@
     {
         color: @hue-1;
     }
+}
 
+// stupid atom
+.syntax--meta.syntax--function.syntax--argument.syntax--typehinted.syntax--php {
+    .syntax--invalid,
+    .syntax--illegal {
+        color: @hue-6 !important;
+        background-color: @syntax-bg !important;
+    }
 }

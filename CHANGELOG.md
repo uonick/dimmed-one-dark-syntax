@@ -2,6 +2,7 @@
 * PHP
 * SCSS
 * HTML
+* XML
 
 # Removed
 * C
