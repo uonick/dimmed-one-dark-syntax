@@ -1,14 +1,14 @@
 {
-  "name": "one-dark-syntax",
+  "name": "dimmed-one-dark-syntax",
   "theme": "syntax",
   "version": "1.8.0",
-  "description": "A dark syntax theme",
+  "description": "A dark syntax theme (extended)",
   "keywords": [
     "dark",
     "blue",
     "syntax"
   ],
-  "repository": "https://github.com/atom/one-dark-syntax",
+  "repository": "https://github.com/uonick/dimmed-one-dark-syntax",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
