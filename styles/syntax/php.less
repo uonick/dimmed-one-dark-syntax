@@ -1,87 +1,112 @@
-// uses
-// constant names
-// static method call
-.syntax--keyword.syntax--other.syntax--use.syntax--php,
-.syntax--entity.syntax--name.syntax--function.syntax--php,
+.syntax--keyword
 {
-    color: @hue-5;
+    &.syntax--operator.syntax--logical.syntax--php
+    {
+        color: @hue-3;
+    }
+    &.syntax--other
+    {
+        &.syntax--phpdoc.syntax--php
+        {
+            color: @mono-2;
+        }
+        &.syntax--use.syntax--php
+        {
+            color: @hue-5;
+        }
+    }
 }
 
-// namespaces
-// extends class name
-// method call
-.syntax--meta.syntax--use.syntax--php,
-.syntax--entity.syntax--other.syntax--inherited-class.syntax--php,
-.syntax--meta.syntax--function-call.syntax--object.syntax--php
+.syntax--entity
 {
-    color: @hue-6-2;
+    &.syntax--name.syntax--function.syntax--php
+    {
+        color: @hue-5;
+    }
+    &.syntax--other.syntax--inherited-class.syntax--php
+    {
+        color: @hue-6-2;
+    }
 }
 
-// AS keyword
-.syntax--keyword.syntax--operator.syntax--logical.syntax--php
+.syntax--meta
 {
-    color: @hue-3;
+    &.syntax--function-call
+    {
+        &.syntax--object.syntax--php
+        {
+            color: @hue-6-2;
+        }
+        &.syntax--static.syntax--php
+        {
+            color: @hue-6;
+        }
+        &.syntax--php {
+            color: @hue-3;
+        }
+    }
+}
+
+.syntax--variable
+{
+    &.syntax--other
+    {
+        &.syntax--php
+        {
+            color: @hue-2;
+        }
+        &.syntax--property.syntax--php
+        {
+            color: @hue-5;
+        }
+    }
+
+}
+
+.syntax--punctuation
+{
+    &.syntax--definition.syntax--variable.syntax--php
+    {
+        color: @hue-2;
+    }
 }
 
 
-// variables
-.syntax--variable.syntax--other.syntax--php,
-.syntax--punctuation.syntax--definition.syntax--variable.syntax--php
+.syntax--constant
 {
-    color: @hue-2;
-}
-
-// constants
-.syntax--constant.syntax--other.syntax--php
-{
-    color: @hue-5-2;
-}
-
-// filter_vars
-.syntax--support.syntax--function.syntax--filter.syntax--php
-{
-    color: @hue-3;
+    &.syntax--other.syntax--php
+    {
+        color: @hue-5-2;
+    }
+    &.syntax--language.syntax--php
+    {
+        color: @hue-5-2;
+    }
 }
 
 
-// static method call
-.syntax--meta.syntax--function-call.syntax--static.syntax--php
+.syntax--support
 {
-    color: @hue-6;
+    &.syntax--function
+    {
+        color: @hue-3;
+        &.syntax--filter.syntax--php
+        {
+            color: @hue-3;
+        }
+    }
+    &.syntax--other.syntax--namespace.syntax--php
+    {
+        color: @hue-6-2;
+    }
 }
 
-
-// function call
-.syntax--meta.syntax--function-call.syntax--php
+.syntax--string.syntax--quoted.syntax--double.syntax--php
 {
-    color: @hue-3;
-}
+    .syntax--variable.syntax--other.syntax--php,
+    .syntax--punctuation.syntax--definition.syntax--variable.syntax--php
+    {
+        color: @hue-1;
+    }
 
-// class property
-.syntax--variable.syntax--other.syntax--property.syntax--php
-{
-    color: @hue-5;
-}
-
-// return in doc blocks
-.syntax--keyword.syntax--other.syntax--phpdoc.syntax--php
-{
-    color:@mono-2;
-}
-
-// true | false
-.syntax--constant.syntax--language.syntax--php
-{
-    color: @hue-5-2;
-}
-
-// all language functions
-.syntax--support.syntax--function {
-    color: @hue-3;
-}
-
-// namespace path
-.syntax--support.syntax--other.syntax--namespace.syntax--php
-{
-    color: @hue-6-2;
 }
