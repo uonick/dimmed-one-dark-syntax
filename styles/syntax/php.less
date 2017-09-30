@@ -14,6 +14,12 @@
         {
             color: @hue-5;
         }
+        &.syntax--namespace.syntax--php {
+            color: @hue-5;
+        }
+        &.syntax--class.syntax--php {
+            color: @hue-6-2;
+        }
     }
 }
 
@@ -49,6 +55,13 @@
 
 .syntax--variable
 {
+    &.syntax--language {
+        &.syntax--this {
+            &.syntax--php {
+                color: @hue-2;
+            }
+        }
+    }
     &.syntax--other
     {
         &.syntax--php
