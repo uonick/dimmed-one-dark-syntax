@@ -2,32 +2,32 @@
 {
     &.syntax--operator.syntax--logical.syntax--php
     {
-        color: @hue-3;
+        color: @syntax-color-method;
     }
     &.syntax--other
     {
         &.syntax--phpdoc.syntax--php
         {
-            color: @mono-2;
+            color: @syntax-color-comment;
         }
         &.syntax--use.syntax--php
         {
-            color: @hue-5;
+            color: @syntax-color-tag;
         }
         &.syntax--namespace.syntax--php {
-            color: @hue-5;
+            color: @syntax-color-tag;
         }
     }
 }
 
-.syntax--meta 
+.syntax--meta
 {
-    .syntax--function.syntax--parameter.syntax--typehinted.syntax--php 
+    .syntax--function.syntax--parameter.syntax--typehinted.syntax--php
     {
         .syntax--storage {
-            &.syntax--type.syntax--php 
+            &.syntax--type.syntax--php
             {
-                color: @hue-1;
+                color: @syntax-color-storage;
             }
         }
     }
@@ -37,14 +37,14 @@
 
 .syntax--entity
 {
-    &.syntax--other.syntax--alias.syntax--php, 
-    &.syntax--name.syntax--function.syntax--php 
+    &.syntax--other.syntax--alias.syntax--php,
+    &.syntax--name.syntax--function.syntax--php
     {
-        color: @hue-5;
+        color: @syntax-color-tag;
     }
     &.syntax--other.syntax--inherited-class.syntax--php
     {
-        color: @hue-6-2;
+        color: @syntax-color-class;
     }
 }
 
@@ -53,17 +53,17 @@
 {
     &.syntax--function-call
     {
-        
+
         &.syntax--object.syntax--php
         {
-            color: @hue-6-2;
+            color: @syntax-color-class;
         }
         &.syntax--static.syntax--php
         {
-            color: @hue-6;
+            color: @syntax-color-attribute;
         }
         &.syntax--php {
-            color: @hue-3;
+            color: @syntax-color-keyword;
         }
     }
 }
@@ -73,7 +73,7 @@
     &.syntax--language {
         &.syntax--this {
             &.syntax--php {
-                color: @hue-2;
+                color: @syntax-color-function;
             }
         }
     }
@@ -81,11 +81,11 @@
     {
         &.syntax--php
         {
-            color: @hue-2;
+            color: @syntax-color-function;
         }
         &.syntax--property.syntax--php
         {
-            color: @hue-5;
+            color: @syntax-color-tag;
         }
     }
 
@@ -95,17 +95,17 @@
 {
     &.syntax--definition.syntax--variable.syntax--php
     {
-        color: @hue-2;
+        color: @syntax-color-function;
     }
 }
 
 
 .syntax--constant
 {
-    &.syntax--other.syntax--php, 
+    &.syntax--other.syntax--php,
     &.syntax--language.syntax--php
     {
-        color: @hue-5-2;
+        color: @syntax-color-theme-orange;
     }
 }
 
@@ -113,23 +113,23 @@
 {
     &.syntax--constant.syntax--core.syntax--php
     {
-        color: @hue-5-2;
+        color: @syntax-color-core-constant;
     }
     &.syntax--function
     {
-        color: @hue-3;
+        color: @syntax-color-keyword;
         &.syntax--magic.syntax--php
         {
-            color: @hue-1;
+            color: @syntax-color-storage;
         }
         &.syntax--filter.syntax--php
         {
-            color: @hue-3;
+            color: @syntax-color-keyword;
         }
     }
     &.syntax--other.syntax--namespace.syntax--php
     {
-        color: @hue-6-2;
+        color: @syntax-color-class;
     }
 }
 
@@ -139,7 +139,7 @@
     .syntax--variable.syntax--other.syntax--php,
     .syntax--punctuation.syntax--definition.syntax--variable.syntax--php
     {
-        color: @hue-1;
+        color: @syntax-color-storage;
     }
 }
 
@@ -153,21 +153,31 @@
     }
 }
 
-.syntax--meta.syntax--function-call.syntax--php 
-> .syntax--entity.syntax--name.syntax--function.syntax--php 
+.syntax--meta.syntax--function-call.syntax--php
+> .syntax--entity.syntax--name.syntax--function.syntax--php
 {
-    color: @hue-3;
+    color: @syntax-color-keyword;
 }
 
 .syntax--meta.syntax--method-call.syntax--static.syntax--php
 {
-    > .syntax--keyword.syntax--other.syntax--class.syntax--php 
+    > .syntax--keyword.syntax--other.syntax--class.syntax--php
     {
-        color: @hue-5;
+        color: @syntax-color-tag;
     }
 }
 
 .syntax--keyword.syntax--other.syntax--class.syntax--php
 {
-    color: @hue-5 !important;; 
+    color: @syntax-color-tag !important;
+}
+
+.syntax--keyword.syntax--operator.syntax--ternary.syntax--php + .syntax--storage.syntax--type.syntax--php
+{
+    color: @syntax-color-theme-orange !important;
+}
+
+.syntax--keyword.syntax--operator.syntax--return-value.syntax--php + .syntax--storage.syntax--type.syntax--php
+{
+    color: @syntax-color-theme-orange !important;
 }
